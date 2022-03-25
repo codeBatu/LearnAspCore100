@@ -16,7 +16,11 @@ namespace Batu.Repository.Repository
         {
             m_aboutRepository = aboutRepository;
         }
-        private Context m_item => new Context();
+        public AboutRepository():base()
+        {
+
+        }
+        private static Context m_item => new ();
         public void Delete(About t)
         {
            m_item.Remove(t);

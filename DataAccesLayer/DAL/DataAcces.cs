@@ -21,9 +21,12 @@ namespace DataAccesLayer.DAL
         private readonly ISkillRepo m_skillRepo;
         private readonly ITestimonialRepo m_testimonialRepo;
         private readonly ISocialMediaRepo m_socialMediaRepo;
+
+
         public DataAcces(IAboutRepository aboutRepository, IContactRepository contactRepository, IExperienceRepo experienceRepo,
             IMainPage mainPage, IMessageRepo messageRepo, IPortfolioRepo portfolioRepo, IServiceRepo serviceRepo, ITestimonialRepo testimonialRepo, ISocialMediaRepo socialMediaRepo, ISkillRepo skillRepo)
         {
+           
             m_aboutRepository = aboutRepository;
             m_contactRepository = contactRepository;
             m_experienceRepo = experienceRepo;
@@ -35,6 +38,40 @@ namespace DataAccesLayer.DAL
             m_testimonialRepo = testimonialRepo;
             m_socialMediaRepo = socialMediaRepo;
         }
+        public DataAcces(ISocialMediaRepo socialMediaRepo)
+        {
+            m_socialMediaRepo = socialMediaRepo;
+        }
+        public DataAcces(ISkillRepo skillRepo)
+        {
+            m_skillRepo = skillRepo;
+        }
+        public DataAcces():base()
+        {
+
+        }
+        public DataAcces(IContactRepository  contactRepository)
+        {
+            m_contactRepository = contactRepository;
+        }
+        public DataAcces(IPortfolioRepo portfolioRepo)
+        {
+            m_portfolioRepo = portfolioRepo;
+        }
+        public DataAcces(IServiceRepo serviceRepository)
+        {
+            m_serviceRepo = serviceRepository;
+        }
+        public DataAcces(IAboutRepository aboutRepository)
+        {
+            m_aboutRepository = aboutRepository;
+        }
+        public DataAcces(IMainPage mainPage)
+        {
+            m_mainPage = mainPage;
+        }
+
+      
         #endregion
         #region AboutPage  //deneme
         public void DeleteAboutPage(About t)

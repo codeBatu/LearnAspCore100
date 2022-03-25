@@ -15,6 +15,10 @@ namespace Batu.Repository.Repository
         {
             m_experienceRepo = experienceRepo;
         }
+        public ExperienceRepo()
+        {
+
+        }
         private Context m_item => new Context();
         public void Delete(ExperienceEntity t)
         {

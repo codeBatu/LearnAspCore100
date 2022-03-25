@@ -7,12 +7,16 @@ using System.Threading.Tasks;
 using Batu.Repository.Concrete;
 namespace Batu.Repository.Repository
 {
-    class SocialMediaRepo : ISocialMediaRepo
+   public class SocialMediaRepo : ISocialMediaRepo
     {
         private readonly ISocialMediaRepo m_ISocialMediaRepo;
         public SocialMediaRepo(ISocialMediaRepo socialMediaRepo)
         {
             m_ISocialMediaRepo = socialMediaRepo;
+        }
+        public SocialMediaRepo():base()
+        {
+
         }
 
         private Context m_item => new Context();

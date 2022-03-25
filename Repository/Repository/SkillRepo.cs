@@ -17,6 +17,10 @@ namespace Batu.Repository.Repository
             m_skillRepo = skillRepo;
 
         }
+        public SkillRepo()
+        {
+
+        }
         private Context m_item => new Context();
         public void Delete(SkillEntity t)
         {

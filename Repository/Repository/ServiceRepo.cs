@@ -8,14 +8,18 @@ using System.Threading.Tasks;
 
 namespace Batu.Repository.Repository
 {
-    class ServiceRepo : IServiceRepo
+   public class ServiceRepo : IServiceRepo
     {
         private readonly IServiceRepo m_serviceRepo;
         public ServiceRepo(IServiceRepo serviceRepo)
         {
             m_serviceRepo = serviceRepo;
         }
-        private Context m_item => new Context();
+        public ServiceRepo():base  ()
+        {
+
+        }
+        private  static Context m_item =>new();
         public void Delete(ServiceEntity t)
         {
           m_item.Remove(t);

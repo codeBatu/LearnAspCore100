@@ -15,6 +15,10 @@ namespace Batu.Repository.Repository
         {
             m_mmesageRepo=messageRepo;
         }
+        public MessageRepo()
+        {
+
+        }
         private Context m_item => new Context();
         public void Delete(MessageEntity t)
         {

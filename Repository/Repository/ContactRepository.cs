@@ -17,6 +17,10 @@ namespace Batu.Repository.Repository
         {
             m_contactRepository = contactRepository;
         }
+        public ContactRepository()
+        {
+
+        }
         private Context m_item => new Context();
         public void Delete(ContactEntity t)
         {

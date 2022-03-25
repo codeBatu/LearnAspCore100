@@ -15,6 +15,10 @@ namespace Batu.Repository.Repository
         {
             m_PortfolioRepo = portfolioRepo;
         }
+        public PortfolioRepo()
+        {
+
+        }
         private Context m_item => new Context();
         public void Delete(PortfolioEntity t)
         {

@@ -1,4 +1,5 @@
-﻿using CoreApp100.Models;
+﻿using Batu.Services.DataServiceLayer;
+using CoreApp100.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,11 +13,15 @@ namespace CoreApp100.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly DataServiceLayer m_dataServiceLayer;
+       
+        public HomeController(ILogger<HomeController> logger,DataServiceLayer dataServiceLayer)
         {
             _logger = logger;
+            m_dataServiceLayer = dataServiceLayer;
         }
+       
+    
 
         public IActionResult Index()
         {

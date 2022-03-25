@@ -16,6 +16,11 @@ namespace Batu.Repository.Repository
             m_mainPage = mainPage;
 
         }
+        public MainPageRepo():base()
+        {
+
+        }
+   
         public void Delete(MainPage t)
         {
             using var item = new Context();

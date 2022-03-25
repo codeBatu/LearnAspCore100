@@ -15,6 +15,10 @@ namespace Batu.Repository.Repository
         {
             m_ıTestimonialRepo = testimonialRepo;
         }
+        public TestimonialRepo()
+        {
+
+        }
         private Context m_item => new Context();
         public void Delete(TestimonialEntity t)
         {
